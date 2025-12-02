@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sentimental Value</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Ccircle%20cx%3D%2232%22%20cy%3D%2232%22%20r%3D%2228%22%20fill%3D%22none%22%20stroke%3D%22%23e50914%22%20stroke-width%3D%221.2%22/%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2232%22%20rx%3D%2228%22%20ry%3D%2222%22%20fill%3D%22none%22%20stroke%3D%22%23e50914%22%20stroke-width%3D%221%22/%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2232%22%20rx%3D%2228%22%20ry%3D%2214%22%20fill%3D%22none%22%20stroke%3D%22%23e50914%22%20stroke-width%3D%221%22/%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2232%22%20rx%3D%2228%22%20ry%3D%226%22%20fill%3D%22none%22%20stroke%3D%22%23e50914%22%20stroke-width%3D%221%22/%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2232%22%20rx%3D%2222%22%20ry%3D%2228%22%20fill%3D%22none%22%20stroke%3D%22%23e50914%22%20stroke-width%3D%221%22/%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2232%22%20rx%3D%2214%22%20ry%3D%2228%22%20fill%3D%22none%22%20stroke%3D%22%23e50914%22%20stroke-width%3D%221%22/%3E%3Cellipse%20cx%3D%2232%22%20cy%3D%2232%22%20rx%3D%226%22%20ry%3D%2228%22%20fill%3D%22none%22%20stroke%3D%22%23e50914%22%20stroke-width%3D%221%22/%3E%3Ccircle%20cx%3D%2246%22%20cy%3D%2218%22%20r%3D%222.5%22%20fill%3D%22%23e50914%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <div id="chart"></div>
+  <div id="title-overlay">
+    <div style="font-size:40px;font-weight:700;line-height:1.2;color:#b01217;">Sentimental Value</div>
+    <div id="subtitle-overlay" style="font-size:15px;font-weight:400;margin-top:12px;max-width:380px;line-height:1.5;color:#444;">
+      This project visualizes the first six months of Netflix's viewing data from 2025. Each layer moves from <b>format to genre to language</b>, scaled by hours watched or number of streams. Hover anywhere to explore.
+    </div>
+  </div>
+  <div id="controls">
+    <div id="view-toggle">
+      <div class="toggle-pill"></div>
+      <button data-view="hours" class="active">Watch Time</button>
+      <button data-view="views">View Count</button>
+      <button data-view="matrix">Matrix</button>
+    </div>
+    <div id="filter-explanation" style="font-size:15px;font-weight:400;margin-top:6px;max-width:380px;line-height:1.5;color:#444;">
+      Measures the total amount of time viewers spent watching a title. Calculated in total hours viewed across all viewers.
+    </div>
+  </div>
+  <div class="breadcrumb" id="breadcrumb"></div>
+  <div id="filteredTotal"></div>
+  <div class="tooltip" id="tooltip"></div>
+  <script src="script.js"></script>
+</body>
+</html>
