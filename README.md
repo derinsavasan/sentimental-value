@@ -15,9 +15,15 @@ Sentimental Value breaks Netflix’s first six months of 2025 into three parts: 
 
 ## Screenshots
 
-- [Watch Time](screenshots/1-watch-time.png)
-- [View Count](screenshots/2-view-count.png)
-- [Matrix – Movies](screenshots/3-matrix-movies.png)
-- [Matrix – TV](screenshots/4-matrix-tv.png)
-- [Matrix – All](screenshots/5-matrix-all.png)
-- [Matrix Legend](screenshots/6-legend.png)
+- Watch time sunburst (hours viewed)  
+  <img src="screenshots/1-watch-time.png" alt="Watch Time" />
+- View count sunburst (number of streams)  
+  <img src="screenshots/2-view-count.png" alt="View Count" />
+- Matrix — Movies (skimmed → stuck with, niche → mainstream)  
+  <img src="screenshots/3-matrix-movies.png" alt="Matrix – Movies" />
+- Matrix — TV (skimmed → stuck with, niche → mainstream)  
+  <img src="screenshots/4-matrix-tv.png" alt="Matrix – TV" />
+- Matrix — All titles (combined view)  
+  <img src="screenshots/5-matrix-all.png" alt="Matrix – All" />
+- Matrix legend for the four viewing modes  
+  <img src="screenshots/6-legend.png" alt="Matrix Legend" />
