@@ -75,23 +75,24 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
 
 .matrix-dropdown {
   position: relative;
-  width: 150px;
+  width: 180px;
 }
 
 .matrix-dropdown-toggle {
-  padding: 9px 30px 9px 12px;
+  padding: 9px 32px 9px 16px;
   border-radius: 999px;
-  border: 1px solid #b01217;
+  border: 1px solid #dedede;
   font-size: 14px;
   font-family: 'Schibsted Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: #b01217;
-  color: #fff;
+  background: #f9f9f9;
+  color: #565a5f;
   font-weight: 600;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
   width: 100%;
   text-align: left;
+  height: 42px;
 }
 
 #matrixDropdownLabel {
@@ -99,8 +100,8 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
 }
 
 .matrix-dropdown-toggle:hover {
-  background: #9f0f14;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+  background: #f0f0f0;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.12);
   transform: translateY(-1px);
 }
 
@@ -117,7 +118,7 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
   width: 10px;
   height: 6px;
   margin-top: -3px;
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23fff' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23565a5f' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   pointer-events: none;
@@ -133,7 +134,7 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
   border-radius: 12px;
   box-shadow: 0 10px 24px rgba(0,0,0,0.12);
   background: #fff;
-  border: 1px solid #eee;
+  border: 1px solid #dedede;
   min-width: 100%;
   width: 100%;
   display: none;
@@ -154,7 +155,9 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
 
 .matrix-dropdown-menu li:hover,
 .matrix-dropdown-menu li.active {
-  background: #f4f4f4;
+  background: #fce9ea;
+  color: #b01217;
+  font-weight: 700;
 }
 
 
@@ -162,41 +165,42 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
   position: fixed;
   left: 22px;
   bottom: 22px;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
   background: #b01217;
   color: #fff;
-  border: 3px solid #fff;
+  border: none;
   display: grid;
   place-items: center;
-  font-weight: 700;
-  font-size: 22px;
-  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  font-weight: 600;
+  font-size: 20px;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.22);
   cursor: pointer;
-  z-index: 9999;
+  z-index: 1000;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 #matrixHelp:hover {
   transform: translateY(-1px);
-  box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.16);
 }
 
 #matrixHelpPopover {
   position: fixed;
-  left: 72px;
-  bottom: 22px;
-  max-width: 360px;
-  padding: 14px 16px;
+  left: 22px;
+  bottom: 74px;
+  max-width: 320px;
+  padding: 16px 18px;
   border-radius: 12px;
-  background: rgba(255,255,255,0.96);
-  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+  background: #fff;
+  box-shadow: 0 14px 30px rgba(0,0,0,0.18);
   color: #333;
   font-size: 13px;
   line-height: 1.5;
-  z-index: 100;
+  z-index: 1000;
   pointer-events: auto;
+  display: none;
 }
 
 #matrixHelpPopover ul {
@@ -206,6 +210,13 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
 
 #matrixHelpPopover li {
   margin-bottom: 6px;
+}
+#matrixHelpPopover p {
+  margin: 0 !important;
+}
+#matrixHelp:hover + #matrixHelpPopover,
+#matrixHelpPopover.show {
+  display: block !important;
 }
 
 .matrix-tooltip-content {

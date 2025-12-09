@@ -49,9 +49,8 @@
   <div id="matrixFooter" class="matrix-footer" style="display:none;"></div>
   <div id="matrixHelp" aria-label="Matrix help" style="display:none;">?</div>
   <div id="matrixHelpPopover" style="display:none;">
-    <strong>How the matrix works</strong>
     <p style="margin:8px 0 0 0;">
-      A sentiment matrix starts by running each title’s summary, tagline, and keyword set through a classifier that scores the language on two scales: emotional tone and emotional intensity. After normalization, those become the axes—cold to warm, and flat to charged. Plotting the scores reveals the four patterns that emerge from the data itself: heavy prestige pieces, high-energy crowd-pleasers, low-intensity background filler, and warm comfort rewatches.
+      The sentiment matrix scores each title by analyzing its summary and keywords for <b>emotional valence</b> and <b>narrative intensity</b>, then weights those scores using basic engagement signals like <b>view count</b> and <b>watch time</b>. After normalization, those combined values become the two axes. Plotting them shows how the titles naturally cluster into the four viewing modes in the dataset.
     </p>
   </div>
   <div id="slice-highlights" class="slice-highlights" style="display:none;"></div>

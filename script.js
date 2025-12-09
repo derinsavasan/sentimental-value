@@ -1362,17 +1362,22 @@ function setupMouseEvents(mouseLayer, nodes, root, centerLabel, tooltip, breadcr
   // Matrix help hover + click toggle
   if (matrixHelp && matrixHelpPopover) {
     let helpPinned = false;
-    const showHelp = () => { matrixHelpPopover.style.display = 'block'; };
-    const hideHelp = () => { if (!helpPinned) matrixHelpPopover.style.display = 'none'; };
+    const showHelp = () => {
+      matrixHelpPopover.classList.add('show');
+      matrixHelpPopover.style.display = 'block';
+    };
+    const hideHelp = () => {
+      if (!helpPinned) {
+        matrixHelpPopover.classList.remove('show');
+        matrixHelpPopover.style.display = 'none';
+      }
+    };
     matrixHelp.addEventListener('mouseenter', showHelp);
     matrixHelp.addEventListener('mouseleave', hideHelp);
     matrixHelp.addEventListener('click', () => {
       helpPinned = !helpPinned;
-      if (helpPinned) {
-        showHelp();
-      } else {
-        hideHelp();
-      }
+      if (helpPinned) showHelp();
+      else hideHelp();
     });
   }
 }

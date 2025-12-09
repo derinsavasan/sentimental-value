@@ -1,0 +1,19 @@
+# Node artifacts
+node_modules/
+
+# Build/output
+dist/
+.cache/
+
+# Secrets and caches
+.tmdb_cache.json
+.env
+.env.local
+
+# OS/editor noise
+.DS_Store
+*.log
+
+# Data dumps (enriched/generated)
+data/NetflixMovies_enriched.csv
+data/NetflixTV_enriched.csv
