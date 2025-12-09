@@ -15,6 +15,18 @@
 </head>
 <body>
   <div id="chart"></div>
+  <div id="matrix-filter" class="matrix-filter" style="display:none;">
+    <div class="matrix-dropdown" id="matrixDropdown" role="listbox" aria-label="Select type">
+      <button class="matrix-dropdown-toggle" id="matrixDropdownToggle" type="button" aria-haspopup="listbox" aria-expanded="false">
+        <span id="matrixDropdownLabel">All</span>
+      </button>
+      <ul class="matrix-dropdown-menu" id="matrixDropdownMenu" role="listbox">
+        <li data-value="all" class="active" role="option" aria-selected="true">All</li>
+        <li data-value="Movie" role="option">Movies</li>
+        <li data-value="TV" role="option">TV Shows</li>
+      </ul>
+    </div>
+  </div>
   <div id="title-overlay">
     <div style="font-size:40px;font-weight:700;line-height:1.2;color:#b01217;">Sentimental Value</div>
     <div id="subtitle-overlay" style="font-size:15px;font-weight:400;margin-top:12px;max-width:380px;line-height:1.5;color:#444;">
@@ -34,6 +46,15 @@
   </div>
   <div class="breadcrumb" id="breadcrumb"></div>
   <div id="filteredTotal"></div>
+  <div id="matrixFooter" class="matrix-footer" style="display:none;"></div>
+  <div id="matrixHelp" aria-label="Matrix help" style="display:none;">?</div>
+  <div id="matrixHelpPopover" style="display:none;">
+    <strong>How the matrix works</strong>
+    <p style="margin:8px 0 0 0;">
+      A sentiment matrix starts by running each title’s summary, tagline, and keyword set through a classifier that scores the language on two scales: emotional tone and emotional intensity. After normalization, those become the axes—cold to warm, and flat to charged. Plotting the scores reveals the four patterns that emerge from the data itself: heavy prestige pieces, high-energy crowd-pleasers, low-intensity background filler, and warm comfort rewatches.
+    </p>
+  </div>
+  <div id="slice-highlights" class="slice-highlights" style="display:none;"></div>
   <div class="tooltip" id="tooltip"></div>
   <script src="script.js"></script>
 </body>

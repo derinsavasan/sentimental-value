@@ -42,8 +42,8 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
 }
 
 #chart svg {
-  width: 90vmin;
-  height: 90vmin;
+  width: 100vw;
+  height: 100vh;
 }
 
 #title-overlay {
@@ -61,6 +61,244 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
   transition: opacity 0.2s;
 }
 
+.matrix-filter {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: transparent;
+  padding: 0;
+  border-radius: 999px;
+  box-shadow: none;
+  z-index: 35;
+  display: none;
+}
+
+.matrix-dropdown {
+  position: relative;
+  width: 150px;
+}
+
+.matrix-dropdown-toggle {
+  padding: 9px 30px 9px 12px;
+  border-radius: 999px;
+  border: 1px solid #b01217;
+  font-size: 14px;
+  font-family: 'Schibsted Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background: #b01217;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  width: 100%;
+  text-align: left;
+}
+
+#matrixDropdownLabel {
+  font-weight: 600;
+}
+
+.matrix-dropdown-toggle:hover {
+  background: #9f0f14;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.14);
+  transform: translateY(-1px);
+}
+
+.matrix-dropdown-toggle:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+}
+
+.matrix-dropdown-toggle::after {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  width: 10px;
+  height: 6px;
+  margin-top: -3px;
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23fff' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  pointer-events: none;
+}
+
+.matrix-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 2px);
+  left: 0;
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+  border-radius: 12px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.12);
+  background: #fff;
+  border: 1px solid #eee;
+  min-width: 100%;
+  width: 100%;
+  display: none;
+  z-index: 40;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  opacity: 0;
+  transform: translateY(4px);
+}
+
+.matrix-dropdown-menu li {
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #565a5f;
+  font-weight: 600;
+  font-family: 'Schibsted Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.matrix-dropdown-menu li:hover,
+.matrix-dropdown-menu li.active {
+  background: #f4f4f4;
+}
+
+
+#matrixHelp {
+  position: fixed;
+  left: 22px;
+  bottom: 22px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #b01217;
+  color: #fff;
+  border: 3px solid #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 22px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.18);
+  cursor: pointer;
+  z-index: 9999;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#matrixHelp:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.2);
+}
+
+#matrixHelpPopover {
+  position: fixed;
+  left: 72px;
+  bottom: 22px;
+  max-width: 360px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.96);
+  box-shadow: 0 14px 32px rgba(0,0,0,0.12);
+  color: #333;
+  font-size: 13px;
+  line-height: 1.5;
+  z-index: 100;
+  pointer-events: auto;
+}
+
+#matrixHelpPopover ul {
+  padding-left: 16px;
+  margin: 8px 0 0 0;
+}
+
+#matrixHelpPopover li {
+  margin-bottom: 6px;
+}
+
+.matrix-tooltip-content {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  max-width: 280px;
+}
+
+.matrix-tooltip-poster {
+  width: 70px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+  flex-shrink: 0;
+  background: #f3f3f3;
+}
+
+.matrix-tooltip-text {
+  max-width: 180px;
+}
+
+
+.slice-highlights {
+  position: absolute;
+  bottom: -30px;
+  left: 20px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  box-shadow: none;
+  background: transparent;
+  z-index: 25;
+  width: 320px;
+  min-height: 280px;
+  font-size: 13px;
+  color: #333;
+}
+
+.slice-highlights .title {
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.slice-highlights ul {
+  margin: 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.slice-highlights li {
+  margin-bottom: 4px;
+}
+
+.slice-highlights .posters {
+  display: flex;
+  gap: 10px;
+}
+
+.slice-highlights .poster-item {
+  width: 100px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.slice-highlights .poster-img {
+  width: 100px;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  margin-bottom: 6px;
+}
+
+
+.slice-highlights .poster-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.slice-highlights .poster-title-line {
+  line-height: 1.2;
+  text-align: center;
+}
+
+.slice-highlights .poster-year {
+  line-height: 1.2;
+  text-align: center;
+}
 #controls {
   position: absolute;
   top: 20px;
@@ -188,6 +426,23 @@ body, input, button, label, .tooltip, #controls, #title-overlay {
   font-size: 14px;
   color: #666;
   z-index: 20;
+  font-weight: 400;
+}
+
+.matrix-footer {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  font-size: 14px;
+  color: #666;
+  z-index: 20;
+  font-weight: 400;
+  pointer-events: none;
+  display: none;
 }
 
 .tooltip {
