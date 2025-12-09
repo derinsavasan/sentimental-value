@@ -1,6 +1,6 @@
 # Sentimental Value
 
-Sentimental Value breaks Netflix’s first six months of 2025 into three parts: watch time, view count, and a sentiment matrix built from emotional valence and narrative intensity. Valence runs cold to warm. Intensity runs flat to charged. Plot every title on those two lines and the patterns show up fast: the heavy prestige stuff, the easy crowd-pleasers, the background filler, and the comfort rewatches.
+Sentimental Value breaks Netflix’s first six months of 2025 into three parts: watch time, view count, and a sentiment matrix built from engagement depth vs. reach. The matrix ranks titles by hours-per-view (x-axis: skimmed → stuck with) and total hours (y-axis: niche → mainstream), then clusters the scatter into four viewing modes: Prestige Pick, Crowd Pleaser, Background Noise, and Comfort Rewatch.
 
 ## Sources
 
@@ -15,8 +15,15 @@ Sentimental Value breaks Netflix’s first six months of 2025 into three parts: 
 
 ## Screenshots
 
-![Watch Time](screenshots/1-watch-time.png)
-![View Count](screenshots/2-view-count.png)
-![Matrix – Movies](screenshots/3-matrix-movies.png)
-![Matrix – TV](screenshots/4-matrix-tv.png)
-![Matrix – All](screenshots/5-matrix-all.png)
+- Watch time sunburst (hours viewed)  
+  ![Watch Time](screenshots/1-watch-time.png)
+- View count sunburst (number of streams)  
+  ![View Count](screenshots/2-view-count.png)
+- Matrix — Movies (skimmed → stuck with, niche → mainstream)  
+  ![Matrix – Movies](screenshots/3-matrix-movies.png)
+- Matrix — TV (skimmed → stuck with, niche → mainstream)  
+  ![Matrix – TV](screenshots/4-matrix-tv.png)
+- Matrix — All titles (combined view)  
+  ![Matrix – All](screenshots/5-matrix-all.png)
+- Matrix legend for the four viewing modes  
+  ![Matrix Legend](screenshots/6-legend.png)

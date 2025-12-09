@@ -47,7 +47,7 @@
   <div id="matrixHelp" aria-label="Matrix help" style="display:none;">?</div>
   <div id="matrixHelpPopover" style="display:none;">
     <p style="margin:8px 0 0 0;">
-      The sentiment matrix scores each title by analyzing its summary and keywords for <b>emotional valence</b> and <b>narrative intensity</b>, then weights those scores using basic engagement signals like <b>view count</b> and <b>watch time</b>. After normalization, those combined values become the two axes. Plotting them shows how the titles naturally cluster into the four viewing modes in the dataset.
+      The sentiment matrix blends each title’s engagement depth (hours per view) and total reach (hours watched). X-axis ranks how much viewers <b>stuck with</b> a title (high) vs <b>skimmed</b> it (low). Y-axis ranks how <b>mainstream</b> it is (high) vs <b>niche</b> (low). Percentile ranks keep the cloud balanced, and k-means splits the space into four viewing modes.
     </p>
   </div>
   <div id="slice-highlights" class="slice-highlights" style="display:none;"></div>
