@@ -1,6 +1,6 @@
 # Sentimental Value
 
-Sentimental Value maps Netflix’s first six months of 2025 viewing data across three lenses: watch time, view count, and an emotional “sentiment matrix.” Sunburst layers move from format → genre → language, scaled by either hours watched or streams. The matrix repositions every title by emotional valence (cold → warm) and narrative intensity (flat → charged), revealing four viewing modes: prestige pieces, crowd-pleasers, background filler, and comfort rewatches. Hover, filter, and sample posters to see how titles cluster—and how enriched metadata (genre, runtime, country, language, posters) changes the story.
+Sentimental Value breaks Netflix’s first six months of 2025 into three parts: watch time, view count, and a sentiment matrix built from emotional valence and narrative intensity. Valence runs cold to warm. Intensity runs flat to charged. Plot every title on those two lines and the patterns show up fast: the heavy prestige stuff, the easy crowd-pleasers, the background filler, and the comfort rewatches.
 
 ## Sources
 
@@ -8,17 +8,15 @@ Sentimental Value maps Netflix’s first six months of 2025 viewing data across 
 - Enriched title metadata from APIs: [TMDB](https://www.themoviedb.org/?language=en-US) + [OMDb](https://www.omdbapi.com) (genres, runtime, language, country, posters)
 - Manual keyword normalization for sentiment mapping and title cleaning
 
-## WIP Drafts
+## WIP & Sketches
 
-- Data enrichment scripts and cache (`scripts/enrich_tmdb.js`, `.tmdb_cache.json`)
-- Intermediate enriched CSVs (`data/NetflixMovies_enriched.csv`, `data/NetflixTV_enriched.csv`)
+- [Quantiative draft](https://github.com/derinsavasan/info-aesthetics/tree/main/exercises/netflix-sunburst-quant), [Qualitative draft](https://github.com/derinsavasan/info-aesthetics/tree/main/exercises/netflix-sunburst-qual), [Geospatial draft](https://github.com/derinsavasan/info-aesthetics/tree/main/exercises/imdb-map-me)
+- [Sketches PDF](https://github.com/derinsavasan/info-aesthetics/blob/main/exercises/netflix-sketches.pdf)
 
 ## Screenshots
 
-![Landing]()
-![Watch Time]()
-![View Count]()
-![Matrix]()
-![Poster Highlights]()
-![Dropdown Filter]()
-![Tooltip]()
+![Watch Time](screenshots/1-watch-time.png)
+![View Count](screenshots/2-view-count.png)
+![Matrix – Movies](screenshots/3-matrix-movies.png)
+![Matrix – TV](screenshots/4-matrix-tv.png)
+![Matrix – All](screenshots/5-matrix-all.png)
