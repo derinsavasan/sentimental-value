@@ -594,7 +594,7 @@ function calculateMatrixData(rawRows) {
   const labeledCentroids = centroids.map((c, i) => ({
     ...c,
     index: i,
-    quadrant: (c.x >= 0.5 ? 'warm' : 'cold') + '-' + (c.y >= 0.5 ? 'charged' : 'flat')
+    quadrant: (c.x >= 0.5 ? 'stuck-with' : 'skimmed') + '-' + (c.y >= 0.5 ? 'mainstream' : 'niche')
   }));
   
   // Step 7: Create final matrix points with cluster info
@@ -794,7 +794,7 @@ function renderMatrix(data) {
     .attr("font-size", "16px")
     .attr("font-weight", "700")
     .attr("fill", "#555")
-    .text("Cold");
+    .text("Skimmed");
   svg.append("text")
     .attr("x", xScale(1) + 40)
     .attr("y", yScale(0.5) + 20)
@@ -802,7 +802,7 @@ function renderMatrix(data) {
     .attr("font-size", "16px")
     .attr("font-weight", "700")
     .attr("fill", "#555")
-    .text("Warm");
+    .text("Stuck With");
   svg.append("text")
     .attr("x", xScale(0.5))
     .attr("y", yScale(1) - 40)
@@ -810,7 +810,7 @@ function renderMatrix(data) {
     .attr("font-size", "16px")
     .attr("font-weight", "700")
     .attr("fill", "#555")
-    .text("Charged");
+    .text("Mainstream");
   svg.append("text")
     .attr("x", xScale(0.5))
     .attr("y", yScale(0) + 40)
@@ -818,7 +818,7 @@ function renderMatrix(data) {
     .attr("font-size", "16px")
     .attr("font-weight", "700")
     .attr("fill", "#555")
-    .text("Flat");
+    .text("Niche");
   
   // Draw big quadrant titles (NYMag style)
   const quadrantLabels = [
