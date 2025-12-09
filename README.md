@@ -1,6 +1,6 @@
 # Sentimental Value
 
-Sentimental Value breaks Netflix’s first six months of 2025 into three parts: watch time, view count, and a sentiment matrix built from engagement depth vs. reach. The matrix ranks titles by hours-per-view (x-axis: skimmed → stuck with) and total hours (y-axis: niche → mainstream), then clusters the scatter into four viewing modes: Prestige Pick, Crowd Pleaser, Background Noise, and Comfort Rewatch.
+*[Sentimental Value](https://derinsavasan.github.io/sentimental-value/)* breaks Netflix’s first six months of 2025 into three parts: watch time, view count, and a sentiment matrix built from engagement depth vs. reach. The matrix ranks titles by hours-per-view (x-axis: skimmed → stuck with) and total hours (y-axis: niche → mainstream), then clusters the scatter into four viewing modes: Prestige Pick, Crowd Pleaser, Background Noise, and Comfort Rewatch.
 
 ## Sources
 
